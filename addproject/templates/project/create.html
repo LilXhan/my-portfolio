@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+  <div class="d-flex align-items-center justify-content-center">
+    <div style="width: 75%;" class="d-flex align-items-center justify-content-between m-5">
+      <h2>Agregar Proyecto</h2>
+      <a href="{% url 'projects' %}" class="btn btn-dark">Volver a proyectos</a>
+    </div>
+  </div>
+
+
+  <div class="d-flex align-items-center justify-content-center">
+    <form style="width: 75%;" method="POST" action="" novalidate>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="d-flex align-items-center justify-content-center">
+        <button type="submit" class="btn btn-success m-3">Agregar Proyecto</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+
+  labels = document.querySelectorAll('label')
+  inputs = document.querySelectorAll('p input')
+  checks = document.querySelectorAll('#id_tags input')
+  checks_labels = document.querySelectorAll('#id_tags label')
+
+  checks_labels.forEach(check_label => {
+    check_label.classList.add('form-check-label')
+  })
+
+  checks.forEach(check => {
+    check.classList.add('form-check-input')
+  })
+
+  labels.forEach((label) => {
+    label.classList.add('form-label')
+  })
+
+  inputs.forEach(input => {
+    input.classList.add('form-control')
+  })
+
+</script>
+
+{% endblock %}
