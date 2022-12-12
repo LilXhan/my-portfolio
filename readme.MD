@@ -5,4 +5,4 @@
 - Usuario: xhan
 - Contraseña: xhan1.23
 
-Todas las rutas estan protegidas, si no ingresas con este usuario, no podras acceder a las otras.
+Todas las rutas estan protegidas, si no ingresas con este usuario, no podras acceder a ninguna del crud de proyecto.
