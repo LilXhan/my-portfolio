@@ -11,9 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-import os
-
-
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ('SECRET_KEY')
+SECRET_KEY = '6&605%0la^svhavtsx56&ky40f8i6o&ym%h^=oi0*6^uyxo82i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -85,11 +83,11 @@ WSGI_APPLICATION = 'website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('MYSQLDATABASE'),
-        'PORT': os.environ.get('MYSQLPORT'),
-        'HOST': os.environ.get('MYSQLHOST'),
-        'USER': os.environ.get('MYSQLUSER'),
-        'PASSWORD': os.environ.get('MYSQLPASSWORD')
+        'NAME': 'railway',
+        'PORT': 'root',
+        'HOST': 'containers-us-west-168.railway.app',
+        'USER': 'root',
+        'PASSWORD': 'riIS91S0VxHtICXLeCjc'
     }
 }
 
